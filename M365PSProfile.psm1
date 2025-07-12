@@ -209,10 +209,10 @@ Function Uninstall-M365Module {
 		[switch]FileMode uses the File System to remove the Modules
 
 		.EXAMPLE
-		Uninstall-M365Modules
+		Uninstall-M365Module
 
 		.EXAMPLE
-		Uninstall-M365Modules -Modules "Az","MSOnline","PnP.PowerShell","Microsoft.Graph" -Scope CurrentUser
+		Uninstall-M365Module -Modules "Az","MSOnline","PnP.PowerShell","Microsoft.Graph" -Scope CurrentUser
 
 		.LINK
 		https://github.com/fabrisodotps1/M365PSProfile
@@ -470,19 +470,19 @@ Function Install-M365Module {
 
 		.EXAMPLE
 		#Installs and updates the Default Modules in CurrentUser Scope
-		Install-M365Modules
+		Install-M365Module
 
 		.EXAMPLE
 		#Installs and updates the specified Modules
-		Install-M365Modules -Modules @("ExchangeOnlineManagement", "MicrosoftTeams", "Microsoft.Online.SharePoint.PowerShell", "PnP.PowerShell") -Scope [CurrentUser|AllUsers]
+		Install-M365Module -Modules @("ExchangeOnlineManagement", "MicrosoftTeams", "Microsoft.Online.SharePoint.PowerShell", "PnP.PowerShell") -Scope [CurrentUser|AllUsers]
 
 		.EXAMPLE
 		#Installs and updates the specified Modules without showing AsciiArt at the Start
-		Install-M365Modules -Modules @("ExchangeOnlineManagement", "MicrosoftTeams", "Microsoft.Online.SharePoint.PowerShell", "PnP.PowerShell") -Scope [CurrentUser|AllUsers] -AsciiArt $False
+		Install-M365Module -Modules @("ExchangeOnlineManagement", "MicrosoftTeams", "Microsoft.Online.SharePoint.PowerShell", "PnP.PowerShell") -Scope [CurrentUser|AllUsers] -AsciiArt $False
 
 		.EXAMPLE
 		#Installs and updates the Default Modules in CurrentUser Scope and use a custom repository called "MyRepo"
-		Install-M365Modules -Repository "MyRepo"
+		Install-M365Module -Repository "MyRepo"
 	#>
 
 	#Parameter for the Module
